@@ -3,7 +3,7 @@
 <html> 
     <head>
 
-      <title>Grid-customizer version2</title>
+      <title>Grid-customizer</title>
 
       
         
@@ -68,7 +68,7 @@ li:first-child{margin-left:0px;}
          function calculate()
          {  
 
-            r_margin=Math.round(((40/mw)*100)*100000000000)/100000000000;
+            r_margin=Math.round(((m/mw)*100)*100000000000)/100000000000;
             string="";
             string+=".row { &#13;&#10;    clear:both; &#13;&#10;    max-width:"+mw+"px; &#13;&#10;    margin:0 auto; &#13;&#10;}&#13;&#13;&#10;[class^=&#34;col-&#34;] {&#13;&#10;    float: left;&#13;&#10;    margin: 0 "+r_margin+"% 0 0;&#13;&#10;    list-style: none;&#13;&#10;    position: relative;&#13;&#10;}&#13;&#13;&#10;[class^=&#34;col-&#34;]:last-child {&#13;&#10;    margin: 0;&#13;&#10;}&#13;&#13;&#10;"
 
