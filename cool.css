@@ -1,0 +1,77 @@
+.pdfContainer
+{	background-color: #fff;
+	margin: 0 auto;
+	width: 768px;
+	padding: 36px;
+	font-size: 18px;
+	font-family: Verdana;
+}
+.clear
+{
+	clear: both;
+}
+.pdfContainer .header
+{
+	font-style: italic;
+	font-weight: 900;
+	font-size: 32px;
+	color: #AAA;
+}
+.pdfContainer .header span
+{
+	float: right;
+	font-size: 18px;
+	line-height: 48px;
+}
+.pdfContainer .footer p
+{
+	text-align: right;
+	color: #AAA;
+	font-style: italic;
+	line-height: 22px;
+}
+.pdfContainer a
+{
+	color: #272972;
+}
+.pdfContainer .footer a
+{
+	
+	font-weight: 900;
+}
+.pdfContainer .section-1 img
+{
+	float: right;
+	margin-top: -38px;
+	width: 262px;
+}
+.pdfContainer .section-1
+{
+	line-height: 56px;
+	padding-top: 62px;
+	font-size: 18px;
+}
+#bdayimg{
+	float: right;
+	margin-right: 42px;
+	width: 180px;
+}
+.pdfContainer .bold
+{
+	font-weight: 800;
+}
+.pdfContainer .section-2
+{
+	padding: 22px 0;
+}
+.pdfContainer .section-2 ul
+{
+	padding: 0;
+	margin: 8px 0;
+	list-style-type: none;
+}
+.pdfContainer .section-2 ul li
+{	
+	line-height: 28px;
+	padding-left: 14px;
+}
