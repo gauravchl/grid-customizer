@@ -2,44 +2,29 @@
 
 <html> 
     <head>
-
       <title>Grid-customizer</title>
-
-      
-        
- <style type="text/css">
-
-input{
-  float:left;
-}
-p{margin: 0;
-padding: 0;}
-.row{
-  max-width: 960px;
-  margin:0px auto;
-  background-color: red;
-  overflow: hidden;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  clear: both;
-}
-li{float: left;margin-left: 20px;}
-li:first-child{margin-left:0px;}
-
- </style>
-         
-         
-    </head>
+      <link rel="stylesheet" type="text/css" href="style.css">
+     </head>
     <body>
+<header>
+  <div class="row">
+    <h1>Grid-Customizer</h1>
+  </div>
+</header>
 
+<section>
 <div class="row">
+<p style="margin: 12px 0;color: #444;">\** Grid-Customizer is used to manipulate css code for creating custom grid system. You can customize your grid system using maximum width, number of columns, margin between column and type of system. **\</p>
+      
 
-      <h1>Create custom grid system</h1>
+<div class="ip">
+<p>Set your parameters
+ 
+      <input type="radio" name="type"  value="fix"><span style="margin-left:22px;">Fix</span>
+      <input id="responsiveradio" type="radio" name="type" value="responsive" checked="checked"><span>Responsive</span>
+</p>
 
-      <ul>
+<ul>
         <li>
           <p>Max-Width (px)</p>
           <input id="mw" type="text" >
@@ -55,13 +40,14 @@ li:first-child{margin-left:0px;}
         
                   
       </ul>
-      <input id="responsiveradio" type="radio" name="type" value="responsive" checked="checked">Responsive<br>
-      <input type="radio" name="type" value="fix">Fix
-        <br><br><br>
+<p style="clear:both;">
+
+        
        
-       <input id="submit" type="button"  value="Create" onclick="reload()"> <br /> <br>
-      <textarea id="output" readonly rows="34" cols="60">
-      </textarea>
+       <input id="submit" type="button"  value="Create" onclick="reload()"> 
+</p>
+</div>
+<textarea id="output" readonly rows="30" cols="60"></textarea>
   
       <script type="text/javascript">
          
@@ -134,6 +120,15 @@ li:first-child{margin-left:0px;}
        
          </script>
          </div>
+</section>
+
+<footer>
+  <div class="row" style="padding: 18px 0;">
+  <a href="https://github.com/gauravchl/grid-customizer">View the source code on GitHub.</a>
+  </div>
+</footer>
+
+
     </body>
 
 </html>

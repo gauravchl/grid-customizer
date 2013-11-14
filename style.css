@@ -1,0 +1,98 @@
+body
+{
+	background-color: #fff;
+	font-family: sans-serif;
+	margin:0;
+	padding: 0;
+}
+header,footer
+{
+	background-color: #046380;
+}
+h1
+{
+	color: #fff;
+}
+.row
+{
+  max-width: 960px;
+  margin:0px auto;
+  overflow: hidden;
+}
+
+
+.ip
+{
+	overflow: hidden;
+	padding: 12px 4px;
+	background: #EFECCA;
+	margin: 22px 0;
+}
+.ip> p:first-child
+{
+	border-bottom: solid 1px #888;
+	padding-bottom: 8px;
+	margin-bottom: 22px;
+}
+.ip> p:first-child input,.ip> p:first-child span
+{
+	float: right;
+}
+input
+{
+  float:left;
+}
+input[type="button"]
+{
+	float: left;
+	background: #A7A37E;
+	border: none;
+	color: #FFF;
+	padding: 2px 24px;
+	font-size: 16px;
+	border-radius: 2px;
+	margin: 16px 2px;
+	cursor: pointer;
+	box-shadow: 2px 2px 4px #CFCFCF;
+}
+textarea
+{
+	padding: 8px 22px;
+}
+span
+{
+	float: left;
+}
+p
+{
+	margin: 0;
+	padding: 0;
+}
+
+
+ul 
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  clear: both;
+}
+li
+{
+	float: left;
+	margin-left: 20px;
+}
+li:first-child
+{
+	margin-left:0px;
+}
+a
+{
+	color: rgba(255, 255, 255, 0.66);
+	text-decoration: none;
+	font-size: 12px;
+}
+a:hover
+{
+	text-decoration: underline;
+}
