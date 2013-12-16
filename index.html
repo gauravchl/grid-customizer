@@ -1,134 +1,79 @@
 <!DOCTYPE html>
+<html>
 
-<html> 
-    <head>
-      <title>Grid-customizer</title>
-      <link rel="stylesheet" type="text/css" href="style.css">
-     </head>
-    <body>
-<header>
-  <div class="row">
-    <h1>Grid-Customizer</h1>
-  </div>
-</header>
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Grid-customizer : Create custom grid system for webdesign   " />
 
-<section>
-<div class="row">
-<p style="margin: 12px 0;color: #444;">\** Grid-Customizer is used to manipulate css code for creating custom grid system. You can customize your grid system using maximum width, number of columns, margin between column and type of system. **\</p>
-      
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-<div class="ip">
-<p>Set your parameters
- 
-      <input type="radio" name="type"  value="fix"><span style="margin-left:22px;">Fix</span>
-      <input id="responsiveradio" type="radio" name="type" value="responsive" checked="checked"><span>Responsive</span>
-</p>
+    <title>Grid-customizer</title>
+  </head>
 
-<ul>
-        <li>
-          <p>Max-Width (px)</p>
-          <input id="mw" type="text" >
-        </li>
-        <li>
-          <p>Grid System</p>
-          <input id="tg" type="text" >
-        </li>
-        <li>
-          <p>Margin (px)</p>
-          <input id="m" type="text" >
-        </li>
-        
-                  
-      </ul>
-<p style="clear:both;">
+  <body>
 
-        
-       
-       <input id="submit" type="button"  value="Create" onclick="reload()"> 
-</p>
-</div>
-<textarea id="output" readonly rows="30" cols="60"></textarea>
-  
-      <script type="text/javascript">
-         
-         var mw=1040,m=40,tg=12,r_margin,string="";
-         var result=new Array(); 
-         
-         function calculate()
-         {  
-            if(document.getElementById("responsiveradio").checked==true){
-            r_margin=Math.round(((m/mw)*100)*100000000000)/100000000000;
-            string="";
-            string+=".row { &#13;&#10;    clear:both; &#13;&#10;    max-width:"+mw+"px; &#13;&#10;    margin:0 auto; &#13;&#10;}&#13;&#13;&#10;[class*=&#34;col-&#34;] {&#13;&#10;    float: left;&#13;&#10;    margin: 0 "+r_margin+"% 0 0;&#13;&#10;    list-style: none;&#13;&#10;    position: relative;&#13;&#10;}&#13;&#13;&#10;[class*=&#34;col-&#34;]:last-child {&#13;&#10;    margin: 0;&#13;&#10;}&#13;&#13;&#10;"
-            
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/gauravchl/grid-customizer">View on GitHub</a>
 
+          <h1 id="project_title">Grid-customizer</h1>
+          <h2 id="project_tagline">Create custom grid system for webdesign   </h2>
 
-            }
-            else{
-              r_margin=m;
-              string="";
-            string+=".row { &#13;&#10;    clear:both; &#13;&#10;    width:"+mw+"px; &#13;&#10;    margin:0 auto; &#13;&#10;}&#13;&#13;&#10;[class*=&#34;col-&#34;] {&#13;&#10;    float: left;&#13;&#10;    margin: 0 "+r_margin+"px 0 0;&#13;&#10;    list-style: none;&#13;&#10;    position: relative;&#13;&#10;}&#13;&#13;&#10;[class*=&#34;col-&#34;]:last-child {&#13;&#10;    margin: 0;&#13;&#10;}&#13;&#13;&#10;"
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/gauravchl/grid-customizer/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/gauravchl/grid-customizer/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-            }
-            
-            
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
-            if(document.getElementById("responsiveradio").checked==true){
-            for(var i=1;i<=tg;i++)
-            {
-              result[i-1]=Math.round(([(i/tg)-((m/mw)*(1-(i/tg)))]*100)*10000000000)/10000000000;
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
-              if(i==tg){string+=".col-"+i+" { width: "+result[i-1]+"%; margin: 0 }&#13;&#10;";}
-                else{string+=".col-"+i+" { width: "+result[i-1]+"% }&#13;&#10;";}
-         
-            } }
-            else
-            {
-              for(var i=1;i<=tg;i++)
-            {
-              result[i-1]=[(i/tg)-((m/mw)*(1-(i/tg)))]*mw;
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
 
-              if(i==tg){string+=".col-"+i+" { width: "+result[i-1]+"px; margin: 0 }&#13;&#10;";}
-                else{string+=".col-"+i+" { width: "+result[i-1]+"px }&#13;&#10;";}
-         
-            }
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
 
-            }        
-          
-         }
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
 
+<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
 
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
 
-         
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
 
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
-         function reload()
-         {
-            mw=document.getElementById("mw").value;
-            tg=document.getElementById("tg").value;
-            m=document.getElementById("m").value;
-            calculate();
-            document.getElementById("output").innerHTML=string;
-         }
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
 
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
-                 
-        document.getElementById("mw").value=1040;
-        document.getElementById("m").value=40;
-        document.getElementById("tg").value=12;
-        reload();
-       
-         </script>
-         </div>
-</section>
+<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+      </section>
+    </div>
 
-<footer>
-  <div class="row" style="padding: 18px 0;">
-  <a href="https://github.com/gauravchl/grid-customizer">View the source code on GitHub.</a>
-  </div>
-</footer>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Grid-customizer maintained by <a href="https://github.com/gauravchl">gauravchl</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
 
+    
 
-    </body>
-
+  </body>
 </html>
